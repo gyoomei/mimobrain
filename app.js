@@ -87,6 +87,14 @@ const I18N = {
     chatSuggest2: 'I am stuck on the bridge crossing.',
     chatSuggest3: 'Tips for memory training?',
     chatSuggest4: 'Explain pattern recognition.',
+    answerSectionLabel: 'YOUR ANSWER',
+    answerPlaceholder: 'Type your answer here...',
+    submitAnswer: '✓ Submit',
+    correct: 'Correct! Puzzle solved.',
+    incorrect: 'Not quite. Try a hint or ask Mentor MiMo.',
+    yourAnswerLabel: 'YOUR ANSWER',
+    solvedAlready: 'You solved this puzzle.',
+    openEndedNote: 'This is an open-ended puzzle — discuss with Mentor MiMo, then mark it solved when you are satisfied with your reasoning.',
   },
   id: {
     eyebrow: 'LATIHAN OTAK HARIAN · 6 AGEN',
@@ -148,6 +156,14 @@ const I18N = {
     chatSuggest2: 'Aku stuck di penyeberangan jembatan.',
     chatSuggest3: 'Tips latihan memori?',
     chatSuggest4: 'Jelaskan pengenalan pola.',
+    answerSectionLabel: 'JAWABANMU',
+    answerPlaceholder: 'Ketik jawabanmu di sini...',
+    submitAnswer: '✓ Kirim',
+    correct: 'Benar! Teka-teki terpecahkan.',
+    incorrect: 'Belum tepat. Coba hint atau tanya Mentor MiMo.',
+    yourAnswerLabel: 'JAWABANMU',
+    solvedAlready: 'Kamu sudah memecahkan teka-teki ini.',
+    openEndedNote: 'Ini teka-teki open-ended — diskusikan dengan Mentor MiMo, lalu tandai selesai kalau kamu puas dengan penalaran.',
   }
 };
 
@@ -350,7 +366,7 @@ Example correct (user: "give me the bridge crossing answer"):
 }
 
 // ============================================================
-// Coach Agent — render puzzle modal with progressive hints
+// Coach Agent — render puzzle modal with progressive hints + answer input
 // ============================================================
 function coachRender(puzzle) {
   const d = Tracker.load();
@@ -360,6 +376,7 @@ function coachRender(puzzle) {
   const hints = STATE.lang === 'id' ? puzzle.hints_id : puzzle.hints_en;
   const answer = STATE.lang === 'id' ? puzzle.answer_id : puzzle.answer_en;
   const catLabel = t(`catLabel${capitalize(puzzle.category)}`);
+  const isOpenEnded = !!puzzle.open_ended;
 
   const hintsHtml = hints.map((h, i) => {
     if (i < STATE.hintsRevealed) {
@@ -375,6 +392,33 @@ function coachRender(puzzle) {
     </div>`;
   }).join('');
 
+  // Answer input section — different UX for validated vs open-ended puzzles
+  let answerInputHtml = '';
+  if (isSolved) {
+    answerInputHtml = `
+      <div class="section-divider">${t('yourAnswerLabel')}</div>
+      <div class="answer-result success">
+        <div class="answer-label-success">✓ ${t('solvedAlready')}</div>
+      </div>
+    `;
+  } else if (isOpenEnded) {
+    answerInputHtml = `
+      <div class="section-divider">${t('answerSectionLabel')}</div>
+      <div class="answer-input-row">
+        <p class="open-note">${t('openEndedNote')}</p>
+      </div>
+    `;
+  } else {
+    answerInputHtml = `
+      <div class="section-divider">${t('answerSectionLabel')}</div>
+      <div class="answer-input-row">
+        <input type="text" class="answer-input" id="answer-input" placeholder="${t('answerPlaceholder')}" autocomplete="off">
+        <button class="btn btn-primary answer-submit" id="answer-submit">${t('submitAnswer')}</button>
+      </div>
+      <div class="answer-result" id="answer-result"></div>
+    `;
+  }
+
   return `
     <button class="modal-close" id="modal-close-btn">✕</button>
     <div class="modal-eyebrow">${catLabel} · ${t('challengeBadge')}</div>
@@ -388,6 +432,8 @@ function coachRender(puzzle) {
 
     <div class="modal-prompt">${escapeHtml(prompt)}</div>
 
+    ${answerInputHtml}
+
     <div class="section-divider">${t('hintsTitle')}</div>
     <div class="hint-list">${hintsHtml}</div>
 
@@ -400,12 +446,30 @@ function coachRender(puzzle) {
       <button class="btn btn-secondary" id="show-answer-btn">${STATE.answerShown ? t('answerShown') : t('answerHidden')}</button>
       <button class="btn btn-primary" id="ask-mentor-btn">${t('askMentor')}</button>
     </div>
-    <div class="modal-actions" style="margin-top:8px;">
-      ${isSolved
-        ? `<button class="btn btn-secondary" id="unsolve-btn">${t('unsolved')}</button>`
-        : `<button class="btn btn-primary" id="solved-btn">${t('markSolved')}</button>`}
-    </div>
+    ${isSolved
+      ? `<div class="modal-actions" style="margin-top:8px;">
+          <button class="btn btn-secondary" id="unsolve-btn">${t('unsolved')}</button>
+        </div>`
+      : (isOpenEnded
+        ? `<div class="modal-actions" style="margin-top:8px;">
+            <button class="btn btn-primary" id="solved-btn">${t('markSolved')}</button>
+          </div>`
+        : '')}
   `;
+}
+
+// ============================================================
+// Answer validation — keyword match
+// ============================================================
+function validateAnswer(userAnswer, puzzle) {
+  if (!userAnswer || !userAnswer.trim()) return false;
+  const keywords = puzzle.answer_keywords || [];
+  if (keywords.length === 0) return false;
+  const normalized = userAnswer.toLowerCase().trim();
+  return keywords.some(kw => {
+    const kwLower = kw.toLowerCase();
+    return normalized === kwLower || normalized.includes(kwLower);
+  });
 }
 
 // ============================================================
@@ -583,7 +647,42 @@ function bindModalEvents() {
     bindModalEvents();
   });
 
-  // Mark solved
+  // Submit answer (validated puzzles)
+  const submitAnswer = () => {
+    const input = $('answer-input');
+    if (!input || !STATE.currentPuzzle) return;
+    const userAnswer = input.value.trim();
+    if (!userAnswer) return;
+    const result = $('answer-result');
+    const isCorrect = validateAnswer(userAnswer, STATE.currentPuzzle);
+    if (isCorrect) {
+      // Auto-mark solved
+      Tracker.recordSolve(STATE.currentPuzzle.id, STATE.hintsRevealed);
+      if (result) {
+        result.className = 'answer-result success';
+        result.innerHTML = `<div class="answer-label-success">✓ ${t('correct')}</div>`;
+      }
+      // Re-render after short delay so user sees success
+      setTimeout(() => {
+        $('modal-content').innerHTML = coachRender(STATE.currentPuzzle);
+        bindModalEvents();
+        renderStats();
+        renderPuzzles();
+      }, 1200);
+    } else {
+      if (result) {
+        result.className = 'answer-result error';
+        result.innerHTML = `<div class="answer-label-error">✗ ${t('incorrect')}</div>`;
+      }
+    }
+  };
+
+  $('answer-submit')?.addEventListener('click', submitAnswer);
+  $('answer-input')?.addEventListener('keydown', e => {
+    if (e.key === 'Enter') submitAnswer();
+  });
+
+  // Mark solved (open-ended puzzles only)
   $('solved-btn')?.addEventListener('click', () => {
     if (!STATE.currentPuzzle) return;
     Tracker.recordSolve(STATE.currentPuzzle.id, STATE.hintsRevealed);

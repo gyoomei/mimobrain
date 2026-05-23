@@ -575,6 +575,77 @@ nav {
   text-transform: uppercase;
 }
 
+/* Answer input section — primary user solving UI */
+.answer-input-row {
+  display: flex;
+  gap: 10px;
+  align-items: stretch;
+  margin-top: 4px;
+}
+.answer-input {
+  flex: 1;
+  background: var(--bg-elev);
+  border: 1.5px solid var(--border);
+  color: var(--ink-primary);
+  padding: 14px 16px;
+  border-radius: 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.answer-input:focus {
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.18);
+}
+.answer-submit {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  padding: 14px 22px;
+}
+.answer-result {
+  margin-top: 12px;
+  padding: 0;
+  border-radius: 10px;
+  transition: all 0.2s;
+}
+.answer-result.success,
+.answer-result.error {
+  padding: 14px 16px;
+}
+.answer-result.success {
+  background: rgba(0, 255, 163, 0.10);
+  border: 1px solid rgba(0, 255, 163, 0.35);
+}
+.answer-result.error {
+  background: rgba(255, 61, 166, 0.08);
+  border: 1px solid rgba(255, 61, 166, 0.32);
+}
+.answer-label-success {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  font-weight: 700;
+  color: #00ffa3;
+  letter-spacing: 0.06em;
+}
+.answer-label-error {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent-magenta);
+  letter-spacing: 0.06em;
+}
+.open-note {
+  font-size: 13px;
+  color: var(--ink-secondary);
+  line-height: 1.55;
+  padding: 12px 14px;
+  background: var(--bg-elev);
+  border-radius: 8px;
+  border-left: 3px solid var(--accent-magenta);
+  margin: 0;
+}
+
 /* Mentor agents section */
 .agents-section { padding: 48px 0; background: var(--bg-deep); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin: 56px -24px 0; }
 .agents-grid {
@@ -1012,6 +1083,6 @@ footer {
   <div class="modal" id="modal-content"></div>
 </div>
 
-<script src="app.js?v=1"></script>
+<script src="app.js?v=2"></script>
 </body>
 </html>

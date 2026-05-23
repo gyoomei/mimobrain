@@ -8,7 +8,8 @@
     "hints_en":["The backpack matters.","He fell from above.","The backpack was supposed to slow him down."],
     "hints_id":["Ranselnya penting.","Ia jatuh dari atas.","Ransel itu seharusnya memperlambatnya."],
     "answer_en":"His parachute failed. The backpack contained the parachute that didn't open.",
-    "answer_id":"Parasutnya gagal. Ranselnya berisi parasut yang tidak terbuka."
+    "answer_id":"Parasutnya gagal. Ranselnya berisi parasut yang tidak terbuka.",
+    "answer_keywords":["parachute","parasut","skydiv","terjun"]
   },
   {
     "id":"l02","category":"lateral","difficulty":2,
@@ -19,7 +20,8 @@
     "hints_en":["His height matters.","He needs help to reach high things.","On rainy days he carries something he doesn't have on dry days."],
     "hints_id":["Tinggi badannya penting.","Ia butuh bantuan untuk meraih sesuatu yang tinggi.","Saat hujan ia membawa sesuatu yang tidak ia punya di hari kering."],
     "answer_en":"He's too short to reach button 20, so he can only press button 10. On rainy days, his umbrella lets him reach the higher button.",
-    "answer_id":"Ia terlalu pendek untuk meraih tombol 20, jadi hanya bisa tekan tombol 10. Saat hujan, payungnya membantu meraih tombol yang lebih tinggi."
+    "answer_id":"Ia terlalu pendek untuk meraih tombol 20, jadi hanya bisa tekan tombol 10. Saat hujan, payungnya membantu meraih tombol yang lebih tinggi.",
+    "answer_keywords":["short","pendek","umbrella","payung","reach","jangkau","tinggi"]
   },
   {
     "id":"l03","category":"lateral","difficulty":3,
@@ -30,7 +32,8 @@
     "hints_en":["You need to ask about what the OTHER guard would say.","Both guards must give you the same answer if framed right.","The lie cancels the truth — or vice versa."],
     "hints_id":["Tanyakan apa yang akan dikatakan penjaga LAIN.","Kedua penjaga harus memberi jawaban sama jika diatur benar.","Kebohongan membatalkan kejujuran — atau sebaliknya."],
     "answer_en":"Ask either guard: 'If I asked the other guard which door leads to freedom, what would they say?' Then choose the OPPOSITE door. The truth-teller honestly reports the liar's lie; the liar lies about the truth-teller's truth. Both point to the death door.",
-    "answer_id":"Tanya salah satu penjaga: 'Kalau aku tanya penjaga lain pintu mana yang menuju kebebasan, apa jawabannya?' Lalu pilih pintu KEBALIKANNYA. Penjaga jujur melaporkan kebohongan si pembohong; pembohong berbohong tentang kebenaran si jujur. Keduanya menunjuk pintu kematian."
+    "answer_id":"Tanya salah satu penjaga: 'Kalau aku tanya penjaga lain pintu mana yang menuju kebebasan, apa jawabannya?' Lalu pilih pintu KEBALIKANNYA. Penjaga jujur melaporkan kebohongan si pembohong; pembohong berbohong tentang kebenaran si jujur. Keduanya menunjuk pintu kematian.",
+    "answer_keywords":["other guard","penjaga lain","opposite","kebalikan","sebaliknya","other door","pintu lain"]
   },
   {
     "id":"l04","category":"lateral","difficulty":1,
@@ -41,7 +44,8 @@
     "hints_en":["You may have assumed something about the surgeon.","The surgeon's gender wasn't stated.","Parents come in pairs."],
     "hints_id":["Mungkin kamu mengasumsikan sesuatu tentang dokter.","Gender dokter tidak disebutkan.","Orang tua datang berpasangan."],
     "answer_en":"The surgeon is the boy's mother.",
-    "answer_id":"Dokter bedah itu adalah ibu si anak."
+    "answer_id":"Dokter bedah itu adalah ibu si anak.",
+    "answer_keywords":["mother","ibu","mom","mama","mommy"]
   },
   {
     "id":"l05","category":"lateral","difficulty":2,
@@ -52,7 +56,8 @@
     "hints_en":["What enables fire?","Without it, nothing else lights."],
     "hints_id":["Apa yang memungkinkan api?","Tanpanya, tidak ada lain yang menyala."],
     "answer_en":"The match.",
-    "answer_id":"Korek apinya."
+    "answer_id":"Korek apinya.",
+    "answer_keywords":["match","korek"]
   },
   {
     "id":"r01","category":"riddle","difficulty":1,
@@ -63,7 +68,8 @@
     "hints_en":["You look at me to know something.","I am on most walls.","I keep changing but never move."],
     "hints_id":["Kamu menatapku untuk tahu sesuatu.","Aku ada di kebanyakan dinding.","Aku terus berubah tapi tidak bergerak."],
     "answer_en":"A clock.",
-    "answer_id":"Jam dinding."
+    "answer_id":"Jam dinding.",
+    "answer_keywords":["clock","jam","watch","arloji"]
   },
   {
     "id":"r02","category":"riddle","difficulty":2,
@@ -74,7 +80,8 @@
     "hints_en":["You make me when you walk.","I appear in soft ground.","I have a shape like a foot."],
     "hints_id":["Kamu membuatku saat berjalan.","Aku muncul di tanah lembut.","Bentukku seperti telapak kaki."],
     "answer_en":"Footsteps.",
-    "answer_id":"Jejak kaki."
+    "answer_id":"Jejak kaki.",
+    "answer_keywords":["footstep","jejak kaki","jejak","step","langkah"]
   },
   {
     "id":"r03","category":"riddle","difficulty":2,
@@ -85,7 +92,8 @@
     "hints_en":["You hear me in canyons and tunnels.","I bounce off walls.","I am your voice — sometimes."],
     "hints_id":["Kamu mendengarku di ngarai dan terowongan.","Aku memantul dari dinding.","Aku adalah suaramu — kadang-kadang."],
     "answer_en":"An echo.",
-    "answer_id":"Gema."
+    "answer_id":"Gema.",
+    "answer_keywords":["echo","gema","bergema"]
   },
   {
     "id":"r04","category":"riddle","difficulty":3,
@@ -96,7 +104,8 @@
     "hints_en":["Read me forward and backward.","I am a single English word.","Spell me reversed."],
     "hints_id":["Baca aku maju dan mundur (dalam bahasa Inggris).","Aku adalah satu kata Inggris.","Eja aku dibalik."],
     "answer_en":"The word 'ton'. Reversed it spells 'not'.",
-    "answer_id":"Kata 'ton' (berat). Dibalik jadi 'not' (tidak)."
+    "answer_id":"Kata 'ton' (berat). Dibalik jadi 'not' (tidak).",
+    "answer_keywords":["ton","not"]
   },
   {
     "id":"r05","category":"riddle","difficulty":2,
@@ -107,7 +116,8 @@
     "hints_en":["You unfold me.","I help you find places.","I am usually paper or digital."],
     "hints_id":["Kamu membukaku.","Aku membantumu menemukan tempat.","Aku biasanya kertas atau digital."],
     "answer_en":"A map.",
-    "answer_id":"Peta."
+    "answer_id":"Peta.",
+    "answer_keywords":["map","peta","atlas"]
   },
   {
     "id":"r06","category":"riddle","difficulty":3,
@@ -118,18 +128,8 @@
     "hints_en":["Everyone uses me, all the time.","You can't see me.","I keep you alive."],
     "hints_id":["Semua orang menggunakanku, sepanjang waktu.","Kamu tidak bisa melihatku.","Aku menjagamu hidup."],
     "answer_en":"Your breath.",
-    "answer_id":"Napasmu."
-  },
-  {
-    "id":"r07","category":"riddle","difficulty":3,
-    "title_en":"Eight Letters",
-    "title_id":"Delapan Huruf",
-    "puzzle_en":"I am an 8-letter word. The first 4 letters mean a strong wind. The last 4 mean a small body of water. The whole word means a mythical creature. What am I?",
-    "puzzle_id":"Aku kata 8 huruf. Empat huruf pertama berarti angin kencang. Empat huruf terakhir berarti tubuh air kecil. Seluruh kata berarti makhluk mitos. Apa aku?",
-    "hints_en":["Strong wind = gust? gale?","Small water = pond? lake?","Combined makes a flying mythical creature."],
-    "hints_id":["Angin kencang = gust? gale?","Air kecil = pond? lake?","Gabungan membuat makhluk terbang mitos."],
-    "answer_en":"GALE + POND? No — it's GALE + PIE? Hmm. Try GUSTPOND? Actual: it's about thinking 4+4. Answer: 'PEGASUS' is 7. Skip. Use puzzle: 4+4=8 with WIND+WATER+CREATURE: 'WINDPOND' isn't real. The classic answer here is GALE+POND yielding GALEPOND — but the canonical riddle resolves differently. Honest answer: this riddle is intentionally tricky and has no perfect 4+4=8 fit; treat it as a brain stretch puzzle.",
-    "answer_id":"Riddle ini sengaja tricky tanpa solusi sempurna 4+4=8. Anggap sebagai latihan otak."
+    "answer_id":"Napasmu.",
+    "answer_keywords":["breath","napas","nafas","breathing","bernapas"]
   },
   {
     "id":"m01","category":"memory","difficulty":1,
@@ -140,7 +140,9 @@
     "hints_en":["Group items into pairs to chunk memory.","Visualize a story connecting each item.","Use the loci method — place each item in a familiar room."],
     "hints_id":["Kelompokkan item dalam pasangan untuk membantu memori.","Visualisasikan cerita yang menghubungkan tiap item.","Gunakan metode loci — letakkan tiap item di ruangan yang dikenal."],
     "answer_en":"This puzzle is procedural — generate a fresh random sequence each play. Score = how many you recall in correct order.",
-    "answer_id":"Puzzle ini procedural — buat urutan acak baru setiap main. Skor = berapa yang kamu ingat dalam urutan benar."
+    "answer_id":"Puzzle ini procedural — buat urutan acak baru setiap main. Skor = berapa yang kamu ingat dalam urutan benar.",
+    "answer_keywords":[],
+    "open_ended":true
   },
   {
     "id":"m02","category":"memory","difficulty":2,
@@ -151,7 +153,9 @@
     "hints_en":["Speak the colors aloud as they flash — auditory rehearsal.","Group into chunks of 3-4.","Don't try to memorize the screen — memorize the rhythm."],
     "hints_id":["Sebutkan warnanya saat berkedip — pengulangan auditori.","Kelompokkan dalam grup 3-4.","Jangan hafal layar — hafal ritmenya."],
     "answer_en":"Procedural game. Score = sequence length successfully recalled.",
-    "answer_id":"Permainan procedural. Skor = panjang urutan yang berhasil diingat."
+    "answer_id":"Permainan procedural. Skor = panjang urutan yang berhasil diingat.",
+    "answer_keywords":[],
+    "open_ended":true
   },
   {
     "id":"m03","category":"memory","difficulty":3,
@@ -162,7 +166,9 @@
     "hints_en":["Phone-number rhythm: 3-3 or 3-2-2 chunks.","Read aloud as you see them.","Most adults max at 7±2 (Miller's law)."],
     "hints_id":["Ritme nomor telepon: chunk 3-3 atau 3-2-2.","Baca keras saat melihatnya.","Kebanyakan dewasa maksimal 7±2 (hukum Miller)."],
     "answer_en":"Procedural game. Score = digit span achieved.",
-    "answer_id":"Permainan procedural. Skor = rentang digit yang dicapai."
+    "answer_id":"Permainan procedural. Skor = rentang digit yang dicapai.",
+    "answer_keywords":[],
+    "open_ended":true
   },
   {
     "id":"x01","category":"math","difficulty":1,
@@ -173,7 +179,8 @@
     "hints_en":["Look at the differences: 4, 6, 8, 10...","Each difference grows by 2.","The next difference is 12."],
     "hints_id":["Lihat selisihnya: 4, 6, 8, 10...","Tiap selisih bertambah 2.","Selisih berikutnya adalah 12."],
     "answer_en":"42. The differences are 4, 6, 8, 10, 12 — each growing by 2. So 30 + 12 = 42. Also: n(n+1) for n=1..6.",
-    "answer_id":"42. Selisihnya 4, 6, 8, 10, 12 — masing-masing bertambah 2. Jadi 30 + 12 = 42. Juga: n(n+1) untuk n=1..6."
+    "answer_id":"42. Selisihnya 4, 6, 8, 10, 12 — masing-masing bertambah 2. Jadi 30 + 12 = 42. Juga: n(n+1) untuk n=1..6.",
+    "answer_keywords":["42"]
   },
   {
     "id":"x02","category":"math","difficulty":2,
@@ -184,7 +191,8 @@
     "hints_en":["The fastest two should not always be the runners.","Sometimes the two slowest cross together.","Try: 1+2 cross, 1 returns, 5+10 cross, 2 returns, 1+2 cross."],
     "hints_id":["Dua tercepat tidak harus selalu jadi pelari.","Kadang dua terlambat menyeberang bersama.","Coba: 1+2 nyebrang, 1 balik, 5+10 nyebrang, 2 balik, 1+2 nyebrang."],
     "answer_en":"17 minutes. Sequence: (1+2 cross, 2min) → (1 returns, 1min) → (5+10 cross, 10min) → (2 returns, 2min) → (1+2 cross, 2min) = 2+1+10+2+2 = 17.",
-    "answer_id":"17 menit. Urutan: (1+2 nyebrang, 2min) → (1 balik, 1min) → (5+10 nyebrang, 10min) → (2 balik, 2min) → (1+2 nyebrang, 2min) = 2+1+10+2+2 = 17."
+    "answer_id":"17 menit. Urutan: (1+2 nyebrang, 2min) → (1 balik, 1min) → (5+10 nyebrang, 10min) → (2 balik, 2min) → (1+2 nyebrang, 2min) = 2+1+10+2+2 = 17.",
+    "answer_keywords":["17"]
   },
   {
     "id":"x03","category":"math","difficulty":2,
@@ -195,7 +203,8 @@
     "hints_en":["You don't need to know which coins are heads.","Take exactly 10 coins.","Then flip them all."],
     "hints_id":["Kamu tidak perlu tahu koin mana yang kepala.","Ambil tepat 10 koin.","Lalu balik semuanya."],
     "answer_en":"Take any 10 coins, flip them ALL. Why: if x heads were among the 10 you took, then (10-x) tails. Flipping makes them (10-x) heads in your pile. The other pile has (10-x) heads. Both equal!",
-    "answer_id":"Ambil 10 koin manapun, balik SEMUANYA. Kenapa: jika x kepala di antara 10 yang diambil, maka (10-x) ekor. Membaliknya menjadi (10-x) kepala di tumpukanmu. Tumpukan lain juga (10-x) kepala. Sama!"
+    "answer_id":"Ambil 10 koin manapun, balik SEMUANYA. Kenapa: jika x kepala di antara 10 yang diambil, maka (10-x) ekor. Membaliknya menjadi (10-x) kepala di tumpukanmu. Tumpukan lain juga (10-x) kepala. Sama!",
+    "answer_keywords":["10","flip","balik","take 10","ambil 10","flip all","balik semua"]
   },
   {
     "id":"x04","category":"math","difficulty":3,
@@ -206,7 +215,9 @@
     "hints_en":["First weigh: split 12 into 3 groups of 4.","Compare 4 vs 4 — balanced means odd ball is in remaining 4.","Each weigh must split possibilities into thirds."],
     "hints_id":["Timbang pertama: bagi 12 jadi 3 grup 4.","Bandingkan 4 vs 4 — seimbang berarti bola berbeda di 4 sisanya.","Tiap timbangan harus membagi kemungkinan jadi sepertiga."],
     "answer_en":"This is a classic 'information theory' puzzle. Each weigh has 3 outcomes (left/right/balanced), so 3 weighings give 27 outcomes — enough for 24 cases (12 balls × 2 directions). Solution involves carefully labeling ball positions and tracking which group each ball was in across weighings. Full algorithm is too long for one screen — we can walk through it together in chat.",
-    "answer_id":"Puzzle 'teori informasi' klasik. Tiap timbangan punya 3 hasil (kiri/kanan/seimbang), jadi 3 timbangan = 27 hasil — cukup untuk 24 kasus (12 bola × 2 arah). Solusinya melibatkan pelabelan posisi bola dan tracking grup tiap bola. Algoritma lengkap terlalu panjang untuk satu layar — bisa dibahas bareng di chat."
+    "answer_id":"Puzzle 'teori informasi' klasik. Tiap timbangan punya 3 hasil (kiri/kanan/seimbang), jadi 3 timbangan = 27 hasil — cukup untuk 24 kasus (12 bola × 2 arah). Solusinya melibatkan pelabelan posisi bola dan tracking grup tiap bola. Algoritma lengkap terlalu panjang untuk satu layar — bisa dibahas bareng di chat.",
+    "answer_keywords":[],
+    "open_ended":true
   },
   {
     "id":"p01","category":"pattern","difficulty":1,
@@ -217,7 +228,8 @@
     "hints_en":["Read each letter as the start of a word.","One. Two. Three...","Count up."],
     "hints_id":["Baca tiap huruf sebagai awal kata (Inggris).","One. Two. Three...","Hitung naik."],
     "answer_en":"N. The sequence is the first letter of each number: One, Two, Three, Four, Five, Six, Seven, Eight, Nine.",
-    "answer_id":"N. Urutannya adalah huruf pertama setiap angka (Inggris): One, Two, Three, Four, Five, Six, Seven, Eight, Nine."
+    "answer_id":"N. Urutannya adalah huruf pertama setiap angka (Inggris): One, Two, Three, Four, Five, Six, Seven, Eight, Nine.",
+    "answer_keywords":["N","nine"]
   },
   {
     "id":"p02","category":"pattern","difficulty":2,
@@ -228,7 +240,8 @@
     "hints_en":["Think of months of the year.","January has 31 days...","Count days month by month."],
     "hints_id":["Pikirkan bulan dalam setahun.","Januari 31 hari...","Hitung hari per bulan."],
     "answer_en":"31. The sequence is the number of days in each month: Jan(31), Feb(28), Mar(31), Apr(30), May(31), Jun(30), Jul(31).",
-    "answer_id":"31. Urutannya adalah jumlah hari per bulan: Jan(31), Feb(28), Mar(31), Apr(30), Mei(31), Jun(30), Jul(31)."
+    "answer_id":"31. Urutannya adalah jumlah hari per bulan: Jan(31), Feb(28), Mar(31), Apr(30), Mei(31), Jun(30), Jul(31).",
+    "answer_keywords":["31"]
   },
   {
     "id":"p03","category":"pattern","difficulty":2,
@@ -239,7 +252,9 @@
     "hints_en":["Look at the alphabet positions.","Each word has 3 letters in a pattern.","Try the next letters: I, J, K..."],
     "hints_id":["Lihat posisi alfabetnya.","Tiap kata 3 huruf dengan pola.","Coba huruf berikutnya: I, J, K..."],
     "answer_en":"JKJ. The first letters go B, F, G, H, J — but the pattern is more like consecutive letters with a vowel sandwich. Approach: skip pattern hard to nail without seeing more examples; we can solve together in chat.",
-    "answer_id":"JKJ. Huruf pertama B, F, G, H, J — polanya seperti huruf berturut dengan vokal di tengah. Pendekatannya susah tanpa contoh lebih banyak; bisa kita pecahkan bareng di chat."
+    "answer_id":"JKJ. Huruf pertama B, F, G, H, J — polanya seperti huruf berturut dengan vokal di tengah. Pendekatannya susah tanpa contoh lebih banyak; bisa kita pecahkan bareng di chat.",
+    "answer_keywords":[],
+    "open_ended":true
   },
   {
     "id":"p04","category":"pattern","difficulty":3,
@@ -250,7 +265,8 @@
     "hints_en":["Each row contains all three shapes.","Each column should also.","Look at row 3: ■, ▲, ?"],
     "hints_id":["Tiap baris berisi ketiga bentuk.","Tiap kolom juga.","Lihat baris 3: ■, ▲, ?"],
     "answer_en":"●. Each row and column contains exactly one ▲, ●, and ■ — a Latin square pattern.",
-    "answer_id":"●. Tiap baris dan kolom berisi tepat satu ▲, ●, dan ■ — pola Latin square."
+    "answer_id":"●. Tiap baris dan kolom berisi tepat satu ▲, ●, dan ■ — pola Latin square.",
+    "answer_keywords":["●","circle","lingkaran","bulat","dot"]
   },
   {
     "id":"p05","category":"pattern","difficulty":2,
@@ -261,6 +277,7 @@
     "hints_en":["Look at how each term is built.","Add the previous THREE terms (not two like Fibonacci).","13+24 is too small — what comes next?"],
     "hints_id":["Lihat bagaimana tiap suku dibentuk.","Jumlahkan TIGA suku sebelumnya (bukan dua seperti Fibonacci).","13+24 terlalu kecil — apa yang berikutnya?"],
     "answer_en":"44, 81. This is the Tribonacci sequence: each term is the sum of the previous three. 7+13+24=44, then 13+24+44=81.",
-    "answer_id":"44, 81. Ini urutan Tribonacci: tiap suku adalah jumlah tiga suku sebelumnya. 7+13+24=44, lalu 13+24+44=81."
+    "answer_id":"44, 81. Ini urutan Tribonacci: tiap suku adalah jumlah tiga suku sebelumnya. 7+13+24=44, lalu 13+24+44=81.",
+    "answer_keywords":["44","81","44, 81","44,81","44 81"]
   }
 ]
